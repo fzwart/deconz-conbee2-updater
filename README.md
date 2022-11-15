@@ -14,3 +14,5 @@ How to use
    example:
     http://deconz.dresden-elektronik.de/deconz-firmware/deCONZ_ConBeeII_<hex_version>.bin.GCF
 2) run ./build_and_run.sh <hex_firmware_version>
+   It will present you an interactive firmware update where you have control over which device will
+   get upgraded using which firmware.
