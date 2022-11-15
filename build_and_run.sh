@@ -22,4 +22,4 @@ fw_version=$1
 image_name="deconz-updater:${fw_version}"
 docker build --build-arg fw_version=${fw_version} -t ${image_name} .
 
-[[ $? -eq 0 ]] && docker run -it ${image_name} -v /dev:/dev --device /sys:/sys --device /lib/modules:/lib/modules
+[[ $? -eq 0 ]] && docker run --rm -it --privileged --device /dev:/dev ${image_name} -f /usr/share/deCONZ/firmware/deCONZ_ConBeeII_${fw_version}.bin.GCF
